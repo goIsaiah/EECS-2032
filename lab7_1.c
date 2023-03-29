@@ -77,13 +77,13 @@ int main(void) {
     while(1) {
     	int sw3 = PTC->PDIR;
     	int sw1 = PTA->PDIR & (1<<4);
-    	if((sw3 == 8) && (sw1 == 16)) {
-    		PTE->PCOR |= 0b10000000000000000000000000000000;
-    		PTD->PSOR |= (1<<5);
+    	if((sw3 == 8) && (sw1 == 16)) { // Switch 1 is not pressed and switch 3 is not pressed
+    		PTE->PCOR |= 0b10000000000000000000000000000000; // Red LED is turned on
+    		PTD->PSOR |= (1<<5); // Green LED is turned off
     	}
 
-    	else if((sw3 == 8) && (sw1 != 16)) {
-    		PTE->PTOR |= 0b10000000000000000000000000000000;
+    	else if((sw3 == 8) && (sw1 != 16)) { // Switch 1 is pressed and switch 3 is not pressed
+    		PTE->PTOR |= 0b10000000000000000000000000000000; // Red LED is blinking
     		PTD->PCOR |= (1<<5);
     		delay();
     	}
