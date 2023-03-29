@@ -84,18 +84,18 @@ int main(void) {
 
     	else if((sw3 == 8) && (sw1 != 16)) { // Switch 1 is pressed and switch 3 is not pressed
     		PTE->PTOR |= 0b10000000000000000000000000000000; // Red LED is blinking
-    		PTD->PCOR |= (1<<5);
+    		PTD->PCOR |= (1<<5); // Green LED is turned on
     		delay();
     	}
 
-    	else if((sw3 != 8) && (sw1 == 16)) {
-    		PTE->PTOR |= 0b10000000000000000000000000000000;
-    		PTD->PSOR |= (1<<5);
-    		delay();
+    	else if((sw3 != 8) && (sw1 == 16)) { // Switch 3 is pressed and switch 1 is not
+    		PTE->PTOR |= 0b10000000000000000000000000000000; // Red LED is blinking
+    		PTD->PSOR |= (1<<5); // Green LED is off
+    		delay(); // Delay used to make Red LED blink
     	}
-    	else{
-    	    PTE->PTOR |= 0b10000000000000000000000000000000;
-    	    PTD->PTOR |= (1<<5);
+    	else{ // Both switches are pressed
+    	    PTE->PTOR |= 0b10000000000000000000000000000000; // Red LED is blinking
+    	    PTD->PTOR |= (1<<5); // Green LED is blinking
     	    delay();
     	}
     }
