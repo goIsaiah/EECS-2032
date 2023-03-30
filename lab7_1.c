@@ -64,12 +64,16 @@ int main(void) {
     BOARD_InitBootPeripherals();
   	/* Init FSL debug console. */
     BOARD_InitDebugConsole();
-    PORTC->PCR[3] = 0x103;
+ 
+    SIM->SCGC5|=(1<<9)|(1<<11)|(1<<12)|(1<<13);
     PORTA->PCR[4] = 0x103;
+    PORTC->PCR[3] = 0x103;
     PORTD->PCR[5] = 0x100;
     PORTE->PCR[31] = 0x100;
-    PTE->PDDR |= 0b10000000000000000000000000000000;
-    PTD->PDDR |= (1<<5);
+    PTA->PDDR &= ~(0x10);
+    PTC->PDDR &= ~(0x10);
+    PTD->PDDR|= (1<<5);
+    PTE->PDDR|= (1<<31);
 
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
