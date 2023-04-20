@@ -1,0 +1,21 @@
+Please find some dummy examples here. You can create one on your own or use these for reference.
+
+For example for books:
+The C Programming Language!0-13-110370-9!Brian Kernighan!Dennis Ritchie!44
+Microcotrollers!0-13-123456!M Mazidi!22
+Computer architecture!0-12-34567!Patterson!Henessey!12
+bash Programming!2-10-234567!Bash himseld! Anotherbash!33
+
+
+
+For courses:
+EECS2032!Introduction to Embedded Systems!0-13-110370-1!R
+EECS2032!Introduction to Embedded Systems1!0-13-110370-2!R
+EECS2032!Introduction to Embedded Systems2!0-13-123456!O
+EECS2032!Introduction to Embedded Systems3!2-10-234563!R
+EECS4201!Computer Architecture the quantatative approach!0-12-34567!O
+EECS2032!Introduction to Embedded Systems4!2-10-23434!R
+EECS4412!eyworks!werty!R
+EECS1111!Python!676767!R
+EECS4201!Computer Architecture the quantatative approach1!0-12-345671!R
+EECS4201!Computer Architecture the quantatative approach2!0-12-345672!R
